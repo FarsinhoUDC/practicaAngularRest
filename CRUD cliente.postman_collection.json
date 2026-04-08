@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4fbc0e59-57ed-40f2-9a20-96b1ab750fbb",
+		"name": "CRUD cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13395433",
+		"_collection_link": "https://unicauca-9050.postman.co/workspace/Ingenier%C3%ADa-del-Software-III~cd6b8221-e6ff-42ea-a146-520599387eaa/collection/13395433-4fbc0e59-57ed-40f2-9a20-96b1ab750fbb?action=share&source=collection_link&creator=13395433"
+	},
+	"item": [
+		{
+			"name": "listar clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear cliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"nombre\": \"nuevo cliente\",\r\n    \"apellido\": \"nuevo apellido\",\r\n    \"email\": \"nuevoCorreo@unicauca.edu.co\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar un cliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/clientes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar cliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"id\": 2,\r\n    \"nombre\": \"nombre actualizado\",\r\n    \"apellido\": \"apellido actualizado\",\r\n    \"email\": \"correoactualizado@unicauca.edu.co\",\r\n    \"createAt\": \"2025-10-01T21:46:47.630+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/clientes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"nombre\": \"nuevo cliente\",\r\n    \"apellido\": \"nuevo apellido\",\r\n    \"email\": \"nuevoCorreo@unicauca.edu.co\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/clientes/3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
