@@ -21,6 +21,7 @@
                         <th scope="col">Apellidos</th>
                         <th scope="col">Email</th>
                         <th scope="col">Fecha de creacion</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,10 @@
                         <td>{{ cliente.apellido }}</td>
                         <td>{{ cliente.email }}</td>
                         <td>{{ cliente.createAt }}</td>
+                        <td>
+                            <button (click)="editarCLiente(cliente.id)" class="btn btn-warning">Editar</button>
+                            <button (click)="eliminarCliente(cliente.id)" class="btn btn-danger">Eliminar</button>
+                        </td>
                     </tr>
                 }
                 </tbody>
