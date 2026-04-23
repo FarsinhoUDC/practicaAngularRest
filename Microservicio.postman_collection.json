@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "1c09be55-fdaa-4d27-8953-ff51b772f7da",
+		"name": "Microservicio Médico",
+		"description": "Colección de peticiones para el microservicio de médicos y franjas horarias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49272816",
+		"_collection_link": "https://juanmedinatm-8526552.postman.co/workspace/a526c0f5-5778-41b9-8fe6-4c85878be26e/collection/49272816-1c09be55-fdaa-4d27-8953-ff51b772f7da?action=share&source=collection_link&creator=49272816"
+	},
+	"item": [
+		{
+			"name": "A - Médicos",
+			"item": [
+				{
+					"name": "Registrar Médico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Carlos\",\n    \"apellido\": \"Gomez\",\n    \"email\": \"carlos@unicauca.edu.co\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						},
+						"description": "Punto A: Registrar un nuevo médico. El id es asignado por la base de datos."
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Médicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						},
+						"description": "Obtener todos los médicos registrados."
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Médico por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos",
+								"1"
+							]
+						},
+						"description": "Obtener un médico por su ID."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "B - Franjas Horarias",
+			"item": [
+				{
+					"name": "Registrar Franja - 07:00 Médico 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"horaInicio\": \"07:00:00\",\n    \"horaFin\": \"07:30:00\",\n    \"fecha\": \"2025-05-10\",\n    \"idMedico\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/franjas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas"
+							]
+						},
+						"description": "Punto B: Registrar franja de 7:00 a 7:30 para el médico 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Franja - 12:00 Médico 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"horaInicio\": \"12:00:00\",\n    \"horaFin\": \"12:30:00\",\n    \"fecha\": \"2025-05-10\",\n    \"idMedico\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/franjas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas"
+							]
+						},
+						"description": "Punto B: Registrar franja de 12:00 a 12:30 para el médico 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Franja - 18:30 Médico 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"horaInicio\": \"18:30:00\",\n    \"horaFin\": \"19:00:00\",\n    \"fecha\": \"2025-05-10\",\n    \"idMedico\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/franjas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas"
+							]
+						},
+						"description": "Punto B: Registrar franja de 18:30 a 19:00 para el médico 2."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "C - Consultar Franjas por Médico y Fecha",
+			"item": [
+				{
+					"name": "Franjas - Médico 1, fecha 2025-05-10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/franjas/medico/1/fecha/2025-05-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas",
+								"medico",
+								"1",
+								"fecha",
+								"2025-05-10"
+							]
+						},
+						"description": "Punto C: Obtener todas las franjas del médico 1 para la fecha 2025-05-10."
+					},
+					"response": []
+				},
+				{
+					"name": "Franjas - Médico 2, fecha 2025-05-10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/franjas/medico/2/fecha/2025-05-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas",
+								"medico",
+								"2",
+								"fecha",
+								"2025-05-10"
+							]
+						},
+						"description": "Punto C: Obtener todas las franjas del médico 2 para la fecha 2025-05-10."
+					},
+					"response": []
+				},
+				{
+					"name": "Franjas - Fecha sin registros (lista vacía)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/franjas/medico/1/fecha/2099-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"franjas",
+								"medico",
+								"1",
+								"fecha",
+								"2099-01-01"
+							]
+						},
+						"description": "Punto C: Fecha sin franjas registradas — debe retornar lista vacía []."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
