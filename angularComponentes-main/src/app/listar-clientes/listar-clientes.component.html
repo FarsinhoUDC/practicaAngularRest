@@ -1,0 +1,45 @@
+<div class="container-fluid m-0 pt-3 bg-primary">
+    <div class="row">
+        <div class="col-md-3 ">
+            <button class="btn btn-secondary" type="button" [routerLink]="['/cliente/crearClientes']">Crear Nuevo Usuario</button>
+        </div>
+        <div class="col-md-9 text-center">
+            <h2>Componente tabla</h2>
+        </div>
+        <div class="col-md-6 text-left pt-5">
+            <h3>Listado de clientes.</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Fecha de creacion</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (cliente of clientes; track cliente.id){
+                    <tr>
+                        <td>{{ cliente.id }}</td>
+                        <td>{{ cliente.nombre }}</td>
+                        <td>{{ cliente.apellido }}</td>
+                        <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.createAt }}</td>
+                        <td>
+                            <button (click)="editarCLiente(cliente.id)" class="btn btn-warning">Editar</button>
+                            <button (click)="eliminarCliente(cliente.id)" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
